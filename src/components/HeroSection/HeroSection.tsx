@@ -123,6 +123,7 @@ export const HeroSection = ({ onToggleTheme }: IHeroProps) => {
           spacing={2}
           flexWrap="wrap"
           justifyContent="center"
+          rowGap={1}
           mb={3}
         >
           <Button
