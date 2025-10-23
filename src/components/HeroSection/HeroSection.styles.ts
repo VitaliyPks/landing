@@ -2,12 +2,13 @@ import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
 
 export const BoxMain = styled(Box)(({ theme }) => ({
-  minHeight: "500px",
+  minHeight: "800px",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
   textAlign: "center",
+  gap: "24px",
   background: theme.palette.background.default,
   position: "relative",
 }));

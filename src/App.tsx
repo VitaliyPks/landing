@@ -6,6 +6,7 @@ import useActions from "./hooks/useActions";
 
 import getTheme from "./utils/theme";
 import { HeroSection } from "./components/HeroSection";
+import { AboutSection } from "./components/AboutSection";
 
 const App = () => {
   const mode = useAppSelector((state) => state.theme.mode);
@@ -21,6 +22,7 @@ const App = () => {
     <MuiThemeProvider theme={muiTheme}>
       <CssBaseline />
       <HeroSection onToggleTheme={handleToggleTheme} />
+      <AboutSection />
     </MuiThemeProvider>
   );
 };
