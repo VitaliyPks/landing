@@ -6,14 +6,7 @@ const getInitialTheme = (): TThemeMode => {
 
   if (saved === "light" || saved === "dark") return saved;
 
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    return "dark";
-  }
-
-  return "light";
+  return "dark";
 };
 
 const initialState: { mode: TThemeMode } = {
