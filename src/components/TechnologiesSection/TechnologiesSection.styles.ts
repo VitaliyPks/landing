@@ -70,7 +70,6 @@ export const LevelLabel = styled(Typography)<{
   color: getLevelColor(level, theme.palette.mode),
   fontSize: "0.9rem",
   textAlign: "left",
-  paddingBottom: theme.spacing(1),
 }));
 
 export const ProgressBarBox = styled(Box)(({ theme }) => ({
@@ -81,7 +80,7 @@ export const ProgressBarBox = styled(Box)(({ theme }) => ({
       ? "rgba(255, 255, 255, 0.1)"
       : "rgba(0, 0, 0, 0.1)",
   borderRadius: 3,
-  mt: 0.5,
+  marginTop: theme.spacing(0.5),
   overflow: "hidden",
 }));
 
