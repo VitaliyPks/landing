@@ -20,7 +20,7 @@ export const GITHUB = "https://github.com/VitaliyPks";
 export const INFO_SHORT =
   "Frontend-разработчик с 3+ годами опыта. Создаю быстрые, доступные и масштабируемые веб-приложения с использованием современных технологий.";
 
-export const ABOUT_TEXT = `Я frontend-разработчик с опытом работы 4 года, специализирующийся на JavaScript/TypeScript, React и Redux. Мои основные компетенции включают разработку интерфейсов с удобным UI, настройку клиент-серверного взаимодействия, управление состоянием приложения с помощью Redux Toolkit и работу с API. Я имею опыт работы с полным циклом разработки, начиная от проектирования базы данных и заканчивая развертыванием проекта.`;
+export const ABOUT_TEXT = `Я frontend-разработчик с опытом работы более 3х лет, специализирующийся на JavaScript/TypeScript, React и Redux. Мои основные компетенции включают разработку интерфейсов с удобным UI, настройку клиент-серверного взаимодействия, управление состоянием приложения с помощью Redux Toolkit и работу с API. Я имею опыт работы с полным циклом разработки, начиная от проектирования базы данных и заканчивая развертыванием проекта.`;
 
 export const PERSONAL_QUALITIES = [
   {
@@ -100,7 +100,7 @@ export const PROJECTS: IProject[] = [
     id: "gisp-mainpage",
     title: "gisp/mainpage",
     role: "Frontend Developer",
-    period: "Июль 2024 – Февраль 2025",
+    period: "Июль 2024 - Февраль 2025",
     description:
       "Государственная информационная система промышленности. Создание и поддержка различных разделов портала, работа с большими объемами данных.",
     stack: [
@@ -128,13 +128,13 @@ export const PROJECTS: IProject[] = [
       "Реализовал формы с валидацией — ошибки ввода сократились на 35%.",
       "Интегрировал админ-панель для самостоятельного обновления контента маркетингом.",
     ],
-    team: "Frontend – 4, Backend – 3, PM – 2, Teamlead – 1, UX/UI designer – 1",
+    team: "Frontend - 4, Backend - 3, PM - 2, Teamlead - 1, UX/UI designer - 1",
   },
   {
     id: "helbe",
     title: "helbe",
     role: "Frontend Developer",
-    period: "Май 2023 – Июль 2024",
+    period: "Май 2023 - Июль 2024",
     description: "Персональный помощник по здоровью.",
     stack: [
       "React",
@@ -161,13 +161,13 @@ export const PROJECTS: IProject[] = [
       "Сокращение времени сборки на 60% благодаря переходу на Vite.",
       "Подключение интернет-эквайринга — пользователи могут оплачивать заказы на сайте.",
     ],
-    team: "Frontend – 1, Backend – 2, PM – 1, Teamlead – 1, UX/UI designer – 1",
+    team: "Frontend - 2, Backend - 2, PM - 1, Teamlead - 1, UX/UI designer - 1",
   },
   {
     id: "6500k",
     title: "6500k",
     role: "Frontend Developer",
-    period: "Март 2025 – Сентябрь 2025",
+    period: "Март 2025 - Сентябрь 2025",
     description: "Проектная работа. Создание интернет-магазина электротоваров.",
     stack: [
       "React",
@@ -193,16 +193,16 @@ export const PROJECTS: IProject[] = [
     achievements: [
       "Запущен полноценный интернет-магазин с нуля — принимает заказы с первого дня.",
       "Оптимизация загрузки изображений — карточки грузятся на 50% быстрее.",
-      "Автоматическая генерация sitemap.xml — улучшено SEO.",
-      "Lighthouse Performance Score: mobile – 93, desktop – 100.",
+      "Автоматическая генерация sitemap.xml - улучшено SEO.",
+      "Lighthouse Performance Score: mobile - 93, desktop - 100.",
     ],
-    team: "Frontend developer – 1",
+    team: "Frontend - 1, Backend - 1, Teamlead - 1, UX/UI designer - 1",
   },
   {
     id: "gisp-chisp",
     title: "gisp/chisp",
     role: "Frontend Developer",
-    period: "Сентябрь 2022 – Январь 2023",
+    period: "Сентябрь 2022 - Январь 2023",
     description:
       "Информационная система для мониторинга и управления проектами.",
     stack: ["React", "TypeScript", "Webpack", "Redux Toolkit", "SASS", "Axios"],
@@ -216,6 +216,6 @@ export const PROJECTS: IProject[] = [
       "Надёжное API-взаимодействие — сетевые сбои <1%.",
       "Точность верстки 98% по оценке дизайнера.",
     ],
-    team: "Frontend – 1, Backend – 2, PM – 1, Teamlead – 1, UX/UI designer – 1",
+    team: "Frontend - 1, Backend - 2, PM - 1, Teamlead - 1, UX/UI designer - 1",
   },
 ];
