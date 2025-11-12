@@ -1,10 +1,8 @@
 import { styled } from "@mui/material/styles";
-import { Box, Typography } from "@mui/material";
-
-import { getLevelColor } from "./TechnologiesSection.const";
+import { Box, Button, Typography } from "@mui/material";
 
 export const BoxMain = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(8, 2),
+  padding: theme.spacing(8, 3),
   maxWidth: 1200,
   margin: "0 auto",
   [theme.breakpoints.up("md")]: {
@@ -14,82 +12,80 @@ export const BoxMain = styled(Box)(({ theme }) => ({
 
 export const TechTitle = styled(Typography)(({ theme }) => ({
   textAlign: "center",
-  marginBottom: theme.spacing(6),
-  fontSize: "2rem",
+  marginBottom: theme.spacing(5),
+  fontSize: "2.2rem",
   fontWeight: 600,
   color: theme.palette.text.primary,
 }));
 
-export const CategoryTitle = styled(Typography)(({ theme }) => ({
-  fontSize: "1.5rem",
-  fontWeight: 600,
-  marginBottom: theme.spacing(3),
-  color: theme.palette.text.primary,
-}));
-
-export const TechList = styled(Box)(({ theme }) => ({
-  display: "grid",
-  gap: theme.spacing(2),
-}));
-
-export const TechItemBox = styled(Box)<{
-  level: "Advanced" | "Intermediate" | "Basic";
-}>(({ theme }) => ({
+export const FiltersContainer = styled(Box)(({ theme }) => ({
   display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  padding: theme.spacing(1.5),
-  borderRadius: (theme.shape.borderRadius as number) || 4,
-  backgroundColor:
-    theme.palette.mode === "dark"
-      ? "rgba(255, 255, 255, 0.03)"
-      : "rgba(0, 0, 0, 0.02)",
-  transition: "background-color 0.2s ease",
-  "&:hover": {
+  flexWrap: "wrap",
+  gap: theme.spacing(1.5),
+  justifyContent: "center",
+  marginBottom: theme.spacing(8),
+}));
+
+export const FilterButton = styled(Button)<{ active?: boolean }>(
+  ({ theme, active }) => ({
+    textTransform: "none",
+    fontSize: "1.1rem",
+    fontWeight: active ? 600 : 500,
+    backgroundColor: active
+      ? theme.palette.mode === "dark"
+        ? "rgba(144, 202, 249, 0.2)"
+        : "rgba(25, 118, 210, 0.1)"
+      : "transparent",
+    color: active
+      ? theme.palette.mode === "dark"
+        ? "#90caf9"
+        : "#1976d2"
+      : theme.palette.text.secondary,
+    border: `1px solid ${
+      active
+        ? theme.palette.mode === "dark"
+          ? "rgba(144, 202, 249, 0.4)"
+          : "rgba(25, 118, 210, 0.4)"
+        : theme.palette.mode === "dark"
+        ? "rgba(255, 255, 255, 0.1)"
+        : "rgba(0, 0, 0, 0.1)"
+    }`,
+    borderRadius: 20,
+    padding: theme.spacing(0.75, 2),
+    transition: "all 0.2s ease",
+    "&:hover": {
+      backgroundColor:
+        theme.palette.mode === "dark"
+          ? "rgba(255, 255, 255, 0.05)"
+          : "rgba(0, 0, 0, 0.03)",
+    },
+  })
+);
+
+export const TagsGrid = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexWrap: "wrap",
+  gap: theme.spacing(1.5),
+  justifyContent: "center",
+}));
+
+export const TechTag = styled(Box)<{ active: boolean }>(
+  ({ theme, active }) => ({
+    borderRadius: 8,
+    fontSize: "1.2rem",
+    fontWeight: 500,
+    opacity: active ? 1 : 0.4,
+    transform: active ? "scale(1)" : "scale(0.95)",
+    transition: "opacity 0.3s ease, transform 0.2s ease",
     backgroundColor:
       theme.palette.mode === "dark"
-        ? "rgba(255, 255, 255, 0.05)"
-        : "rgba(0, 0, 0, 0.04)",
-  },
-}));
-
-export const TechName = styled(Typography)(({ theme }) => ({
-  fontWeight: 500,
-  color: theme.palette.text.primary,
-}));
-
-export const TechExperience = styled(Typography)(({ theme }) => ({
-  color: theme.palette.text.secondary,
-  fontSize: "0.875rem",
-}));
-
-export const LevelLabel = styled(Typography)<{
-  level: "Advanced" | "Intermediate" | "Basic";
-}>(({ theme, level }) => ({
-  fontWeight: 600,
-  color: getLevelColor(level, theme.palette.mode),
-  fontSize: "0.9rem",
-  textAlign: "left",
-}));
-
-export const ProgressBarBox = styled(Box)(({ theme }) => ({
-  width: 95,
-  height: 6,
-  backgroundColor:
-    theme.palette.mode === "dark"
-      ? "rgba(255, 255, 255, 0.1)"
-      : "rgba(0, 0, 0, 0.1)",
-  borderRadius: 3,
-  marginTop: theme.spacing(0.5),
-  overflow: "hidden",
-}));
-
-export const ProgressBarFill = styled(Box)<{
-  level: "Advanced" | "Intermediate" | "Basic";
-}>(({ theme, level }) => ({
-  height: "100%",
-  width:
-    level === "Advanced" ? "100%" : level === "Intermediate" ? "65%" : "30%",
-  backgroundColor: getLevelColor(level, theme.palette.mode),
-  borderRadius: 3,
-}));
+        ? "rgba(144, 202, 249, 0.1)"
+        : "rgba(25, 118, 210, 0.08)",
+    color: theme.palette.mode === "dark" ? "#90caf9" : "#1976d2",
+    border: `1px solid ${
+      theme.palette.mode === "dark"
+        ? "rgba(255, 255, 255, 0.08)"
+        : "rgba(0, 0, 0, 0.08)"
+    }`,
+  })
+);

@@ -1,14 +1,10 @@
-export type TTechLevel = "Advanced" | "Intermediate" | "Basic";
-
-export interface ITechItem {
+export interface TechItem {
   name: string;
-  years: number;
-  level: TTechLevel;
+  category: string;
 }
-
 export interface ITechCategory {
-  title: string;
-  items: ITechItem[];
+  label: string;
+  id: string;
 }
 
 export interface IProject {

@@ -14,7 +14,6 @@ import {
   ProjectSubtitle,
 } from "./ProjectSection.styles";
 import { PROJECTS } from "../../data/resume-data";
-import { EmojiEvents } from "@mui/icons-material";
 
 export const ProjectsSection = () => {
   return (
@@ -62,7 +61,6 @@ export const ProjectsSection = () => {
             </List>
 
             <ProjectSubtitle variant="h4">
-              <EmojiEvents fontSize="small" />
               Достижения
             </ProjectSubtitle>
             <List>
