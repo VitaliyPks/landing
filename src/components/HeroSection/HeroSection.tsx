@@ -63,7 +63,9 @@ export const HeroSection = ({ onToggleTheme }: IHeroProps) => {
           <motion.span
             animate={{ opacity: [1, 0, 1] }}
             transition={{ duration: 1, repeat: Infinity }}
-            style={{ color: mode === "dark" ? "#90caf9" : "#1976d2" }}
+            style={{
+              WebkitTextFillColor: mode === "dark" ? "#90caf9" : "#1976d2",
+            }}
           >
             |
           </motion.span>
@@ -123,6 +125,7 @@ export const HeroSection = ({ onToggleTheme }: IHeroProps) => {
           spacing={2}
           flexWrap="wrap"
           justifyContent="center"
+          rowGap={1}
           mb={3}
         >
           <Button

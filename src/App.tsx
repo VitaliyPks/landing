@@ -1,7 +1,8 @@
 import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
-import { TechnologiesSection } from "./components/TechnologiesSection/TechnologiesSection";
+import { TechnologiesSection } from "./components/TechnologiesSection";
+import { ProjectsSection } from "./components/ProjectsSection";
 import { AboutSection } from "./components/AboutSection";
 import { HeroSection } from "./components/HeroSection";
 
@@ -26,6 +27,7 @@ const App = () => {
       <HeroSection onToggleTheme={handleToggleTheme} />
       <AboutSection />
       <TechnologiesSection />
+      <ProjectsSection />
     </MuiThemeProvider>
   );
 };
