@@ -1,4 +1,4 @@
-import type { IProject, ITechCategory } from "../types/data";
+import type { IProject, ITechCategory, TechItem } from "../types/data";
 
 export const FULL_NAME = "Пексялев Виталий Викторович";
 
@@ -40,59 +40,39 @@ export const PERSONAL_QUALITIES = [
   },
 ];
 
-export const TECHNOLOGIES: ITechCategory[] = [
-  {
-    title: "Языки программирования",
-    items: [
-      { name: "JavaScript", years: 4, level: "Advanced" },
-      { name: "TypeScript", years: 3, level: "Advanced" },
-    ],
-  },
-  {
-    title: "Фреймворки и библиотеки",
-    items: [
-      { name: "React", years: 4, level: "Advanced" },
-      { name: "Redux Toolkit", years: 4, level: "Advanced" },
-      { name: "React Router", years: 4, level: "Intermediate" },
-      { name: "React Hook Form", years: 4, level: "Intermediate" },
-      { name: "NextJS", years: 1, level: "Intermediate" },
-      { name: "Node.JS", years: 1, level: "Basic" },
-    ],
-  },
-  {
-    title: "Стили и языки разметки",
-    items: [
-      { name: "HTML", years: 4, level: "Advanced" },
-      { name: "CSS", years: 4, level: "Advanced" },
-      { name: "SCSS/SASS", years: 3, level: "Advanced" },
-      { name: "MUI", years: 1, level: "Basic" },
-      { name: "Styled Components", years: 1, level: "Basic" },
-    ],
-  },
-  {
-    title: "Сборщики",
-    items: [
-      { name: "Webpack", years: 2, level: "Intermediate" },
-      { name: "Vite", years: 3, level: "Intermediate" },
-    ],
-  },
-  {
-    title: "Операционные системы",
-    items: [
-      { name: "Windows", years: 4, level: "Advanced" },
-      { name: "Linux", years: 1, level: "Intermediate" },
-    ],
-  },
-  {
-    title: "Прочее",
-    items: [
-      { name: "Rest API", years: 4, level: "Advanced" },
-      { name: "GraphQL", years: 3, level: "Advanced" },
-      { name: "Git", years: 4, level: "Intermediate" },
-      { name: "Figma", years: 3, level: "Intermediate" },
-      { name: "Chart.js", years: 2, level: "Intermediate" },
-    ],
-  },
+export const ALL_TECHNOLOGIES: TechItem[] = [
+  { name: "JavaScript", category: "languages" },
+  { name: "TypeScript", category: "languages" },
+  { name: "React", category: "frameworks" },
+  { name: "Redux Toolkit", category: "frameworks" },
+  { name: "React Router", category: "frameworks" },
+  { name: "React Hook Form", category: "frameworks" },
+  { name: "NextJS", category: "frameworks" },
+  { name: "Node.JS", category: "frameworks" },
+  { name: "HTML", category: "styling" },
+  { name: "CSS", category: "styling" },
+  { name: "SCSS/SASS", category: "styling" },
+  { name: "MUI", category: "styling" },
+  { name: "Styled Components", category: "styling" },
+  { name: "Webpack", category: "build" },
+  { name: "Vite", category: "build" },
+  { name: "Windows", category: "os" },
+  { name: "Linux", category: "os" },
+  { name: "Rest API", category: "other" },
+  { name: "GraphQL", category: "other" },
+  { name: "Git", category: "other" },
+  { name: "Figma", category: "other" },
+  { name: "Chart.js", category: "other" },
+];
+
+export const TECH_CATEGORIES: ITechCategory[] = [
+  { id: "all", label: "Все" },
+  { id: "languages", label: "Языки программирования" },
+  { id: "frameworks", label: "Фреймворки и библиотеки" },
+  { id: "styling", label: "Стили и языки разметки" },
+  { id: "build", label: "Сборщики" },
+  { id: "os", label: "Операционные системы" },
+  { id: "other", label: "Прочее" },
 ];
 
 export const PROJECTS: IProject[] = [
