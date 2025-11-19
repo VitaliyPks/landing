@@ -160,7 +160,7 @@ export const HeroSection = ({ onToggleTheme }: IHeroProps) => {
             variant="contained"
             startIcon={<Download />}
             component="a"
-            href="public/CV_Peksyalev_Vitaliy_Frontend.pdf"
+            href="./CV_Peksyalev_Vitaliy_Frontend.pdf"
             download
             sx={{
               bgcolor: mode === "dark" ? "#90caf9" : "#1976d2",
