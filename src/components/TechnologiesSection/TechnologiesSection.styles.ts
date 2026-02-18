@@ -47,8 +47,8 @@ export const FilterButton = styled(Button)<{ active?: boolean }>(
           ? "rgba(144, 202, 249, 0.4)"
           : "rgba(25, 118, 210, 0.4)"
         : theme.palette.mode === "dark"
-        ? "rgba(255, 255, 255, 0.1)"
-        : "rgba(0, 0, 0, 0.1)"
+          ? "rgba(255, 255, 255, 0.1)"
+          : "rgba(0, 0, 0, 0.1)"
     }`,
     borderRadius: 20,
     padding: theme.spacing(0.75, 2),
@@ -59,7 +59,13 @@ export const FilterButton = styled(Button)<{ active?: boolean }>(
           ? "rgba(255, 255, 255, 0.05)"
           : "rgba(0, 0, 0, 0.03)",
     },
-  })
+    [theme.breakpoints.down(500)]: {
+      fontSize: "0.9rem",
+      padding: theme.spacing(0.5, 1.2),
+      borderRadius: 16,
+      minWidth: "auto",
+    },
+  }),
 );
 
 export const TagsGrid = styled(Box)(({ theme }) => ({
@@ -87,5 +93,5 @@ export const TechTag = styled(Box)<{ active: boolean }>(
         ? "rgba(255, 255, 255, 0.08)"
         : "rgba(0, 0, 0, 0.08)"
     }`,
-  })
+  }),
 );

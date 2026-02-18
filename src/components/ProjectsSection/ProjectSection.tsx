@@ -60,15 +60,6 @@ export const ProjectsSection = () => {
               ))}
             </List>
 
-            <ProjectSubtitle variant="h4">
-              Достижения
-            </ProjectSubtitle>
-            <List>
-              {project.achievements.map((ach, i) => (
-                <li key={i}>{ach}</li>
-              ))}
-            </List>
-
             <TeamInfo>Команда: {project.team}</TeamInfo>
           </ProjectCard>
         </motion.div>
