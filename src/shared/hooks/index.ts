@@ -1,0 +1,1 @@
+export { useTypeWriter } from './useTypeWriter';
