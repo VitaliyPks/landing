@@ -15,6 +15,5 @@ export interface IProject {
   description: string;
   stack: string[];
   responsibilities: string[];
-  achievements: string[];
   team: string;
 }
